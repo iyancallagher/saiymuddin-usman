@@ -302,7 +302,7 @@
             @click="selectFromPicker(file.url)"
             :id="`mp-pick-${file.filename}`"
           >
-            <img :src="`http://localhost:3001${file.url}`" :alt="file.filename" />
+            <img :src="`${apiBase}${file.url}`" :alt="file.filename" />
           </div>
           <div v-if="mediaFiles.length === 0" class="mp-empty">Belum ada gambar</div>
         </div>
@@ -313,7 +313,8 @@
 
 <script setup>
 import { ref, reactive, computed, onMounted } from 'vue'
-import { profileApi, uploadApi } from '@/services/api.js'
+import { profileApi, uploadApi, API_BASE } from '@/services/api.js'
+const apiBase = API_BASE
 
 const activeTab = ref('hero')
 const loading = ref(true)
@@ -413,7 +414,7 @@ async function openPickerAbout() {
 }
 
 function selectFromPicker(url) {
-  const full = `http://localhost:3001${url}`
+  const full = `${apiBase}${url}`
   if (pickerTarget.value === 'hero') hero.photo = full
   else about.photo = full
   pickerOpen.value = false

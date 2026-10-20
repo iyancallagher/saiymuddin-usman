@@ -91,7 +91,7 @@
         <!-- Server status -->
         <div class="server-status" :class="{ online: serverOnline, offline: !serverOnline }">
           <span class="status-dot"></span>
-          <span>Server {{ serverOnline ? 'Online' : 'Offline' }} — http://localhost:3001</span>
+          <span>Server {{ serverOnline ? 'Online' : 'Offline' }} — {{ apiBase }}</span>
         </div>
       </div>
     </div>
@@ -100,7 +100,8 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import { worksApi } from '@/services/api.js'
+import { worksApi, API_BASE } from '@/services/api.js'
+const apiBase = API_BASE
 
 const loadingWorks = ref(true)
 const recentWorks = ref([])
@@ -115,7 +116,7 @@ const stats = ref([
 onMounted(async () => {
   // Check server
   try {
-    const r = await fetch('http://localhost:3001/api/health')
+    const r = await fetch(`${apiBase}/api/health`)
     serverOnline.value = r.ok
   } catch { serverOnline.value = false }
 

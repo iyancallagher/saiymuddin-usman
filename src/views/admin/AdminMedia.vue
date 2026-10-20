@@ -54,7 +54,7 @@
       >
         <div class="media-img-wrap">
           <img
-            :src="`http://localhost:3001${file.url}`"
+            :src="`${apiBase}${file.url}`"
             :alt="file.filename"
             loading="lazy"
           />
@@ -84,7 +84,8 @@
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
-import { uploadApi } from '@/services/api.js'
+import { uploadApi, API_BASE } from '@/services/api.js'
+const apiBase = API_BASE
 
 const files = ref([])
 const loading = ref(true)
@@ -120,7 +121,7 @@ function toggleSelect(filename) {
 }
 
 function copyUrl(file) {
-  navigator.clipboard.writeText(`http://localhost:3001${file.url}`)
+  navigator.clipboard.writeText(`${apiBase}${file.url}`)
   showToast('URL disalin ke clipboard!')
 }
 

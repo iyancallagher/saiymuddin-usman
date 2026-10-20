@@ -106,6 +106,7 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import profileData from '@/data/profile.json'
+import { API_URL } from '@/services/config.js'
 
 // Reactive profile — will be refreshed from API when server is running
 const hero = ref({ ...profileData.hero })
@@ -146,7 +147,7 @@ function countUp() {
 onMounted(async () => {
   // Try to fetch latest data from CMS API
   try {
-    const res = await fetch('http://localhost:3001/api/profile/hero')
+    const res = await fetch(`${API_URL}/profile/hero`)
     if (res.ok) {
       const data = await res.json()
       hero.value = data

@@ -1,4 +1,6 @@
-const BASE_URL = 'http://localhost:3001/api'
+import { API_URL, API_BASE } from './config.js'
+
+export { API_BASE }
 
 function getToken() {
   return localStorage.getItem('cms_token')
@@ -12,23 +14,19 @@ function authHeaders() {
 }
 
 async function request(method, path, body = null) {
-  const opts = {
-    method,
-    headers: authHeaders()
-  }
+  const opts = { method, headers: authHeaders() }
   if (body) opts.body = JSON.stringify(body)
 
-  const res = await fetch(`${BASE_URL}${path}`, opts)
+  const res = await fetch(`${API_URL}${path}`, opts)
   const data = await res.json()
-
   if (!res.ok) throw new Error(data.error || `HTTP ${res.status}`)
   return data
 }
 
-// Auth
+// ── Auth ───────────────────────────────────────────────────
 export const authApi = {
   login: (username, password) =>
-    fetch(`${BASE_URL}/auth/login`, {
+    fetch(`${API_URL}/auth/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ username, password })
@@ -40,7 +38,7 @@ export const authApi = {
   verify: () => request('POST', '/auth/verify')
 }
 
-// Works
+// ── Works ──────────────────────────────────────────────────
 export const worksApi = {
   getAll: (params = {}) => {
     const q = new URLSearchParams(params).toString()
@@ -53,20 +51,20 @@ export const worksApi = {
   toggleFeatured: id => request('PATCH', `/works/${id}/featured`, {})
 }
 
-// Services
+// ── Services ───────────────────────────────────────────────
 export const servicesApi = {
   getAll: () => request('GET', '/services'),
   updateOne: (index, data) => request('PUT', `/services/${index}`, data),
   updateAll: data => request('PUT', '/services', data)
 }
 
-// Agencies
+// ── Agencies ───────────────────────────────────────────────
 export const agenciesApi = {
   getAll: () => request('GET', '/agencies'),
   updateOne: (index, data) => request('PUT', `/agencies/${index}`, data)
 }
 
-// Testimonials
+// ── Testimonials ───────────────────────────────────────────
 export const testimonialsApi = {
   getAll: () => request('GET', '/testimonials'),
   create: data => request('POST', '/testimonials', data),
@@ -74,7 +72,7 @@ export const testimonialsApi = {
   delete: id => request('DELETE', `/testimonials/${id}`)
 }
 
-// Profile (Hero + About)
+// ── Profile (Hero + About) ─────────────────────────────────
 export const profileApi = {
   getAll: () => request('GET', '/profile'),
   getHero: () => request('GET', '/profile/hero'),
@@ -83,12 +81,12 @@ export const profileApi = {
   updateAbout: data => request('PUT', '/profile/about', data)
 }
 
-// Upload
+// ── Upload ─────────────────────────────────────────────────
 export const uploadApi = {
   uploadImage: async (file) => {
     const fd = new FormData()
     fd.append('image', file)
-    const res = await fetch(`${BASE_URL}/upload`, {
+    const res = await fetch(`${API_URL}/upload`, {
       method: 'POST',
       headers: { Authorization: `Bearer ${getToken()}` },
       body: fd

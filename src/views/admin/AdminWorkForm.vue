@@ -212,7 +212,7 @@
             @click="selectMedia(file.url)"
             :id="`mp-file-${file.filename}`"
           >
-            <img :src="`http://localhost:3001${file.url}`" :alt="file.filename" />
+            <img :src="`${apiBase}${file.url}`" :alt="file.filename" />
             <div class="mp-file-name">{{ file.filename }}</div>
           </div>
           <div v-if="mediaFiles.length === 0" class="mp-empty">
@@ -227,7 +227,8 @@
 <script setup>
 import { ref, reactive, computed, onMounted } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
-import { worksApi, uploadApi } from '@/services/api.js'
+import { worksApi, uploadApi, API_BASE } from '@/services/api.js'
+const apiBase = API_BASE
 
 const router = useRouter()
 const route = useRoute()
@@ -281,7 +282,7 @@ async function openMediaPicker(target, idx = null) {
 }
 
 function selectMedia(url) {
-  const fullUrl = `http://localhost:3001${url}`
+  const fullUrl = `${apiBase}${url}`
   if (mediaPicker.target === 'cover') {
     form.cover = fullUrl
   } else if (mediaPicker.target === 'media' && mediaPicker.mediaIdx !== null) {

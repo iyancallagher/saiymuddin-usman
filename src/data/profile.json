@@ -4,7 +4,7 @@
     "tagline": "Membekukan momen. Merancang identitas.\nBercerita melalui gambar dan gerak.",
     "availabilityText": "Available for projects",
     "isAvailable": true,
-    "photo": "http://localhost:3001/uploads/saiy-1792491719263.jpeg",
+    "photo": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=900&q=85",
     "roles": [
       "Fotografer",
       "Videografer",
@@ -45,7 +45,7 @@
     ]
   },
   "about": {
-    "photo": "http://localhost:3001/uploads/saiy-1792491719263.jpeg",
+    "photo": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&q=85",
     "heading": "Kreator dengan",
     "headingAccent": "visi visual",
     "headingSuffix": "yang kuat.",

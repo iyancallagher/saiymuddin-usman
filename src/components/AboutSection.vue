@@ -65,6 +65,7 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import profileData from '@/data/profile.json'
+import { API_URL } from '@/services/config.js'
 
 const about = ref({ ...profileData.about })
 
@@ -81,7 +82,7 @@ function scrollTo(id) {
 
 onMounted(async () => {
   try {
-    const res = await fetch('http://localhost:3001/api/profile/about')
+    const res = await fetch(`${API_URL}/profile/about`)
     if (res.ok) {
       about.value = await res.json()
     }
