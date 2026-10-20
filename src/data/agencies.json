@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Mementa",
+    "tagline": "Creative Agency",
+    "description": "Mementa adalah creative agency yang berfokus pada storytelling visual untuk brand dan bisnis. Dari fotografi komersial, videografi event, hingga kampanye media sosial — Mementa hadir sebagai mitra kreatif jangka panjang.",
+    "url": "https://mementa.id",
+    "logo": null,
+    "accentColor": "#A78BFA",
+    "services": ["Brand Photography", "Event Coverage", "Social Media Content", "Video Production"],
+    "stats": { "projects": "120+", "clients": "45+", "years": "4" }
+  },
+  {
+    "name": "404",
+    "tagline": "Design Studio",
+    "description": "404 adalah design studio yang menangani identitas visual, UI/UX, dan materi desain untuk bisnis modern. Berani, bersih, dan selalu tepat sasaran — itulah DNA visual dari setiap karya 404.",
+    "url": "https://studio404.id",
+    "logo": null,
+    "accentColor": "#F472B6",
+    "services": ["Brand Identity", "Logo Design", "UI/UX Design", "Print & Digital Collateral"],
+    "stats": { "projects": "80+", "clients": "30+", "years": "3" }
+  }
+]

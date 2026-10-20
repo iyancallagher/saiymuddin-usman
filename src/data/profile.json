@@ -1,0 +1,96 @@
+{
+  "hero": {
+    "firstName": "Saiynuddin",
+    "tagline": "Membekukan momen. Merancang identitas.\nBercerita melalui gambar dan gerak.",
+    "availabilityText": "Available for projects",
+    "isAvailable": true,
+    "photo": "http://localhost:3001/uploads/saiy-1792491719263.jpeg",
+    "roles": [
+      "Fotografer",
+      "Videografer",
+      "Desainer",
+      "Editor"
+    ],
+    "agency1": "Mementa",
+    "agency2": "404",
+    "stats": [
+      {
+        "value": 200,
+        "suffix": "+++",
+        "label": "Project Selesai"
+      },
+      {
+        "value": 175,
+        "suffix": "+++",
+        "label": "Klien Puas"
+      },
+      {
+        "value": 10,
+        "suffix": "+",
+        "label": "Tahun Pengalaman"
+      },
+      {
+        "value": 2,
+        "suffix": "",
+        "label": "Agency Aktif"
+      }
+    ],
+    "marqueeItems": [
+      "Fotografi",
+      "Videografi",
+      "Desain Grafis",
+      "Editing",
+      "Brand Identity",
+      "Storytelling"
+    ]
+  },
+  "about": {
+    "photo": "http://localhost:3001/uploads/saiy-1792491719263.jpeg",
+    "heading": "Kreator dengan",
+    "headingAccent": "visi visual",
+    "headingSuffix": "yang kuat.",
+    "yearsExperience": "10+",
+    "bio": [
+      "Saya Saiynuddin Usman — fotografer, videografer, desainer grafis, dan editor berbasis di Indonesia. Saya percaya bahwa karya visual yang baik bukan sekadar indah, tapi bercerita dan memiliki tujuan.",
+      "Melalui **Mementa** dan **404**, saya memimpin tim kreatif yang telah membantu puluhan brand menemukan dan mengekspresikan identitas visual mereka."
+    ],
+    "skillGroups": [
+      {
+        "name": "Photography",
+        "skills": [
+          "Sony A7 Series",
+          "Lightroom",
+          "Capture One",
+          "Studio Lighting"
+        ]
+      },
+      {
+        "name": "Videography",
+        "skills": [
+          "Premiere Pro",
+          "DaVinci Resolve",
+          "After Effects",
+          "Drone"
+        ]
+      },
+      {
+        "name": "Design",
+        "skills": [
+          "Figma",
+          "Illustrator",
+          "Photoshop",
+          "Canva Pro"
+        ]
+      },
+      {
+        "name": "Other",
+        "skills": [
+          "Project Management",
+          "Art Direction",
+          "Branding",
+          "Copywriting"
+        ]
+      }
+    ]
+  }
+}

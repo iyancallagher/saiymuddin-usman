@@ -1,0 +1,33 @@
+{
+  "name": "saiynuddin-usman-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "server": "node server/index.cjs",
+    "start": "start cmd /k \"node server/index.cjs\" && vite"
+  },
+  "dependencies": {
+    "@unhead/vue": "^2.0.0",
+    "@vueuse/core": "^11.0.0",
+    "@vueuse/motion": "^2.2.0",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.8",
+    "express": "^5.3.0",
+    "express-validator": "^7.3.2",
+    "gsap": "^3.12.0",
+    "jsonwebtoken": "^9.0.3",
+    "multer": "^2.4.0",
+    "uuid": "^14.0.3",
+    "vue": "^3.4.0",
+    "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.0",
+    "vite": "^5.4.0"
+  }
+}

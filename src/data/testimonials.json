@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Rina Hartono",
+    "role": "Marketing Director",
+    "company": "PT. Nusantara Food",
+    "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80",
+    "quote": "Hasil foto produk yang Saiynuddin kerjakan benar-benar meningkatkan penjualan kami. Tim sangat profesional, memahami kebutuhan brand, dan deliverable selalu tepat waktu.",
+    "rating": 5
+  },
+  {
+    "id": 2,
+    "name": "Budi Santoso",
+    "role": "CEO",
+    "company": "Kopi Archipelago",
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80",
+    "quote": "Video profil perusahaan yang dibuat sangat cinematic dan bercerita. Banyak calon investor yang terkesan dengan kualitas videonya. Highly recommended!",
+    "rating": 5
+  },
+  {
+    "id": 3,
+    "name": "Sari Dewi",
+    "role": "Brand Manager",
+    "company": "Elora Skincare",
+    "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80",
+    "quote": "Design identity yang dibuat 404 untuk brand kami sangat on-point. Visi kami langsung dipahami, eksekusinya bersih dan modern. Akan terus berkolaborasi.",
+    "rating": 5
+  },
+  {
+    "id": 4,
+    "name": "Reza Firmansyah",
+    "role": "Event Organizer",
+    "company": "Eventku.id",
+    "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80",
+    "quote": "Sudah berkali-kali pakai jasa Mementa untuk dokumentasi event. Kualitas konsisten, tim komunikatif, dan hasilnya selalu melebihi ekspektasi klien kami.",
+    "rating": 5
+  }
+]

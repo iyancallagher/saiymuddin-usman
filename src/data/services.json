@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Photography",
+    "description": "Membekukan momen terbaik — portrait, produk, event, dan editorial.",
+    "icon": "",
+    "slug": "photography",
+    "color": "#A78BFA"
+  },
+  {
+    "title": "Videography",
+    "description": "Cerita bergerak yang memukau — sinematik, wedding, dan komersial.",
+    "icon": "",
+    "slug": "videography",
+    "color": "#34D399"
+  },
+  {
+    "title": "Graphic Design",
+    "description": "Visual yang kuat — branding, identitas, konten media sosial.",
+    "icon": "",
+    "slug": "graphic-design",
+    "color": "#F472B6"
+  },
+  {
+    "title": "Editing",
+    "description": "Post-production presisi — color grading, cut, dan compositing.",
+    "icon": "",
+    "slug": "editing",
+    "color": "#FB923C"
+  }
+]
