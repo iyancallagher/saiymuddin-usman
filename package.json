@@ -8,7 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "server": "node server/index.cjs",
-    "start": "start cmd /k \"node server/index.cjs\" && vite"
+    "start": "start cmd /k \"node server/index.cjs\" && vite",
+    "deploy:content": "git add src/data/ && git diff --cached --quiet || git commit -m \"content: update\" && git push"
   },
   "dependencies": {
     "@unhead/vue": "^2.0.0",
